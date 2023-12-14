@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Numbers</title>
+</head>
+<body>
+    <h1>Add Numbers</h1>
+
+    <form id="inputForm">
+        <label for="input1">Number 1:</label>
+        <input type="number" id="input1" name="input1" required>
+        <br>
+        <label for="input2">Number 2:</label>
+        <input type="number" id="input2" name="input2" required>
+        <br>
+        <input type="button" value="Add Numbers" onclick="runScript()">
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function runScript() {
+            var num1 = parseInt(document.getElementById('input1').value);
+            var num2 = parseInt(document.getElementById('input2').value);
+
+            // Run your Python script with the inputs
+            var result = add_numbers(num1, num2);
+
+            document.getElementById('result').innerHTML = "Result: " + result;
+        }
+        
+        function add_numbers(a, b) {
+            // This function is equivalent to the Python script logic
+            return a + b;
+        }
+    </script>
+</body>
+</html>
